@@ -53,7 +53,7 @@ string Playfair::DividePlaintext(string plaintext){
 }
 string Playfair::Encryption(string plaintext,vector<vector<char>> keyMat){
 	string pre_text = DividePlaintext(plaintext);
-	cout << pre_text << endl;
+	cout << "preprocess plaintext;" << pre_text << endl;
 	string result = "";
 	for (int i = 0; i < pre_text.length()-1; i+=2){
 		int r1 = FindRowIdColId(pre_text[i], keyMat)[0]; 
@@ -102,8 +102,19 @@ string Playfair::Decryption(string ciphertext, vector<vector<char>> keyMat){
 			result = result + keyMat[r1][c2] + keyMat[r2][c1];
 		}
 	}
-	return result;
+	cout << "the result of decryption;" << result << endl;
+	return DivideCiphertext(result);
 }
 string Playfair::DivideCiphertext(string ciphertext){
-
+	string result = "";
+	int n = ciphertext.length();
+	for (int i = 0; i < n; i ++){
+		if (i<n-2&&ciphertext[i] == ciphertext[i + 2] && ciphertext[i + 1] == 'x'){
+			result = result + ciphertext[i] + ciphertext[i + 2];
+			i += 2;
+		}
+		else result += ciphertext[i];
+	}
+	if (ciphertext[n - 1] == 'x')result = result.substr(0, result.length() - 1);
+	return result;
 }
