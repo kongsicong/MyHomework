@@ -2,12 +2,12 @@
 #include "Playfair.h"
 #include<iostream>
 int main(){
-	string key = "monarchy";
+	string key = "cipher";
 	Playfair playfair(key);
 	cout << "key:" << key << endl;
 	vector<vector<char>> keyMat = playfair.GenerateKeyMat();
 	playfair.Display(keyMat);
-	string plaintext = "balloon";
+	string plaintext = "fill";
 	cout << "plaintext:" << plaintext << endl;
 	string ciphertext = playfair.Encryption(plaintext, keyMat);
 	cout << "ciphertext:"<<ciphertext << endl;
