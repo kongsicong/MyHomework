@@ -1,17 +1,21 @@
-<!DOCTYPE>
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>login page</title>
-		<link ref="stylesheet" text="text/css" href="css/login.css"/>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<link rel="stylesheet" type="text/css" href="css/login.css">
 	</head>
-	<body>
-		<div id="login">
-			<form>
-				<h1>LOGIN IN</h1>
-				Account<input type="text" name="account"/></br>
-				Passowrd<input type="text" name="password"/></br>
-				<input type="button" value="login in"/>
-				<input type="button" value="register"/>
+	<body >
+		<div id="login" >
+			<h1 id="title">LOGIN IN</h1>
+			<form >
+				<input type="text" name="account" placeholder="username" class="inputbox" autofocus="true"/></br>
+				<input type="text" name="password" placeholder="password" class="inputbox"/></br>
+				<div id="button">
+					<a href="index.html"><input type="button" value="login" id="go" /></a>
+					<input type="button" value="register" id="register"/>
+				</div>
+				
 			</form>
 		</div>
 	</body>
