@@ -4,15 +4,15 @@
 		<title>login page</title>
 		<link rel="stylesheet" type="text/css" href="css\login.css">
 	</head>
-	<body >
-		<div id="login">
-			<h1 align="center" overflow="none">LOGIN IN</h1>
-			<form>
-				<div style="height:40%;border:1px solid black"><span>Account</span><input type="text" name="account" align="center"/></br></div>
-				<div style="height:40%;border:1px solid black"><span>Passowrd</span><input type="text" name="password"/></br></div>
-				<div>
-					<input type="button" value="login in" />
-					<input type="button" value="register"/>
+	<body>
+		<div id="login" >
+			<h1 id="title">LOGIN IN</h1>
+			<form >
+				<input type="text" name="account" placeholder="username" class="inputbox" autofocus="true"/></br>
+				<input type="text" name="password" placeholder="password" class="inputbox"/></br>
+				<div id="button">
+					<a href="index.html"><input type="button" value="login" id="go" /></a>
+					<input type="button" value="register" id="register"/>
 				</div>
 				
 			</form>
