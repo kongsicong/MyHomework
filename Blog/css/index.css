@@ -1,33 +1,93 @@
+@font-face {
+	font-family: sthupo;
+	src: url("STHUPO.TTF") format("TrueType");
+}
 body {
 	width: 1280px;
 	min-width: 700px;
-	margin: auto;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: -21px;
+
 	
 }
 #header {
+	font-family: mysh;
+	padding-top: 0;
 	background: #2ECC71;
 	opacity: 0.5;
 	filter: alpha(opacity=50);
 	-moz-opacity: 0.5;
 	height: 100px;
 	min-height: 80px;
+	
+}
+#header>h1 {
+	font-family: mysh;
+	text-align: center;
+}
+#nav {
+	text-align: center;
+	box-orient: horizontal;
+	-moz-box-orient: horizontal;
+	-webkit-box-orient: horizontal;
 	width: 100%;
+}
+#nav>button {
+	font-family: mysh;
+	border: 2px solid #E67E22;
+	border-radius: 5px 5px 5px 5px;
+	width: 10%;
+	text-align: center;
+}
+#nav>button:hover {
+	background: #C2B5C7;
 }
 #content {
-	background: #95A5A6;
-	opacity: 0.3;
-	filter: alpha(opacity=30);
-	-moz-opacity: 0.3;
-	height: 700px;
-	min-height: 600px;
+	padding-top: 1px;
+	background: #F1C40F;
+	opacity: 0.8;
+	filter: alpha(opacity=80);
+	-moz-opacity: 0.8;
 	width: 100%;
+	text-align: center;
+}
+.main {
+}
+.main>div {
+	font-family: mysh;
+	margin: auto;
+	overflow: hidden;
+	text-align: left;
+	width: 70%;
+	height: 100px;
+	border: 3px solid #C0392B;
+	border-radius: 5px 5px 5px 5px;
+	text-overflow: ellipsis;
+	white-space: normal;
 }
 #footer {
-	background: #2ECC71;
+	background: #2D2625;
 	opacity: 0.5;
 	filter: alpha(opacity=50);
 	-moz-opacity: 0.5;
 	height: 100px;
 	min-height: 80px;
 	width: 100%;
+}
+#footer>span {
+	display: block;
+	margin: auto;
+	text-align: center;
+	color: #E74C3C;
+	height: 50%;
+}
+#footer>span>a {
+	font-family: mysh;
+	color: #E74C3C;
+	height: 50%;
+	text-align: center;
+}
+a:hover {
+	color: #E74C3C;
 }
